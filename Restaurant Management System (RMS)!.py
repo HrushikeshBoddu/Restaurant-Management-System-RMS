@@ -102,6 +102,7 @@ class RMS:
 
     @classmethod
     def RemoveItemMenu(cls):
+        # Allows removing items to the menu
         while True:
             cls.Remove_Item = input('Enter Item You Want To Remove From Menu: ')
             if cls.Remove_Item == 'done':
