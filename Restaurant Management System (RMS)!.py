@@ -99,3 +99,16 @@ class RMS:
             else:
                 self.total += self.menu[self.AddingDish]
                 self.NoOfItems += 1
+
+    @classmethod
+    def RemoveItemMenu(cls):
+        while True:
+            cls.Remove_Item = input('Enter Item You Want To Remove From Menu: ')
+            if cls.Remove_Item == 'done':
+                print('Completed removing')
+                break
+            elif cls.Remove_Item in cls.menu:
+                cls.menu.pop(cls.Remove_Item)
+                print(f'{cls.Remove_Item} successfully removed from menu')
+            else:
+                print(f'{cls.Remove_Item} not in menu')
